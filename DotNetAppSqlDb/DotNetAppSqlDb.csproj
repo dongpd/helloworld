@@ -153,6 +153,10 @@
     <Compile Include="Migrations\201807151036187_InitialCreate.Designer.cs">
       <DependentUpon>201807151036187_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807151414312_AddProperty.cs" />
+    <Compile Include="Migrations\201807151414312_AddProperty.Designer.cs">
+      <DependentUpon>201807151414312_AddProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyDatabaseContext.cs" />
     <Compile Include="Models\Todo.cs" />
@@ -226,6 +230,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807151036187_InitialCreate.resx">
       <DependentUpon>201807151036187_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807151414312_AddProperty.resx">
+      <DependentUpon>201807151414312_AddProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
