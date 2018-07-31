@@ -289,7 +289,7 @@
 
     <Target Name="RestorePackages">
     <Message Text="Restoring nuget..."/>
-    <Exec Command="'$(SolutionDir)NuGet.exe' restore '$(SolutionPath)'" />
+    <Exec Command="$(SolutionDir)NuGet.exe restore $(SolutionPath)" />
   </Target>
 
 <!--
@@ -317,6 +317,6 @@ The custom script uses the Azure module cmdlets to make service checks and publi
   <Target Name="DeployCloud" DependsOnTargets="PackageCloud">
     <Message Text="Deploying package to cloud service ..."/>
     <Exec WorkingDirectory="$(MSBuildThisFileDirectory)"
-         Command="$(windir)\system32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy ByPass -f $(MSBuildThisFileDirectory)PublishCloudService.ps1 -packageLocation '$(PackageOutDir)$(TargetCloudService)\app.publish\$(TargetCloudService).cspkg' -cloudConfigLocation '$(PackageOutDir)$(TargetCloudService)\app.publish\ServiceConfiguration.Cloud.cscfg' -subscriptionDataFile '$(PubSettingsPath)' -selectedsubscription '$(SubscriptionName)' -servicename $(TargetCloudService) -storageAccountName $(StorageAccount)" />
+         Command="$(windir)\system32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy ByPass -f $(MSBuildThisFileDirectory)PublishCloudService.ps1 -packageLocation $(PackageOutDir)$(TargetCloudService)\app.publish\$(TargetCloudService).cspkg -cloudConfigLocation $(PackageOutDir)$(TargetCloudService)\app.publish\ServiceConfiguration.Cloud.cscfg -subscriptionDataFile $(PubSettingsPath) -selectedsubscription $(SubscriptionName) -servicename $(TargetCloudService) -storageAccountName $(StorageAccount)" />
   </Target>
 </Project>
