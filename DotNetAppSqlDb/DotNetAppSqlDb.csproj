@@ -289,7 +289,7 @@
 
     <Target Name="RestorePackages">
     <Message Text="Restoring nuget..."/>
-    <Exec Command="'$(SolutionDir).nuget\NuGet.exe' restore '$(SolutionPath)'" />
+    <Exec Command="'$(SolutionDir)\NuGet.exe' restore '$(SolutionPath)'" />
   </Target>
 
 <!--
