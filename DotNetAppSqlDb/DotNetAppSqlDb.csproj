@@ -4,8 +4,8 @@
   <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-        <SolutionDir Condition=" '$(SolutionDir)'=='' ">$(MSBuildThisFileDirectory)..\</SolutionDir>
-    <SolutionPath Condition=" '$(SolutionPath)'=='' ">$(MSBuildThisFileDirectory)..\DotNetAppSqlDb.sln</SolutionPath>
+        <SolutionDir Condition=" '$(SolutionDir)'=='' ">$(MSBuildThisFileDirectory)\</SolutionDir>
+    <SolutionPath Condition=" '$(SolutionPath)'=='' ">$(MSBuildThisFileDirectory)\DotNetAppSqlDb.sln</SolutionPath>
     <OutDir Condition=" '$(OutDir)'=='' ">$(MSBuildThisFileDirectory)\Output\Binaries\</OutDir>
     <PackageOutDir>$(MSBuildThisFileDirectory)Output\Packages\</PackageOutDir>
     <TargetCloudService>helloworlddongpd</TargetCloudService>
